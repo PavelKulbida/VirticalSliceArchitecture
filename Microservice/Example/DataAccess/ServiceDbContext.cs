@@ -1,5 +1,4 @@
-﻿using Microsoft.Data.Sqlite;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace Example.DataAccess
 {
@@ -7,13 +6,8 @@ namespace Example.DataAccess
   {
     public DbSet<WeatherForecast> WeatherForecast { get; set; }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    public ServiceDbContext(DbContextOptions<ServiceDbContext> options) : base(options)
     {
-      var connectionStringBuilder = new SqliteConnectionStringBuilder { DataSource = "database.db" };
-      var connectionString = connectionStringBuilder.ToString();
-      var connection = new SqliteConnection(connectionString);
-
-      optionsBuilder.UseSqlite(connection);
     }
   }
 }

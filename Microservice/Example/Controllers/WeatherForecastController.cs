@@ -7,15 +7,11 @@ namespace Example.Controllers
   [Route("[controller]")]
   public class WeatherForecastController : ControllerBase
   {
-    private readonly ServiceDbContext _dbContext = new ServiceDbContext();
+    private readonly ServiceDbContext _dbContext;
 
-    [HttpPost]
-    public int Create(WeatherForecast item)
+    public WeatherForecastController(ServiceDbContext dbContext)
     {
-      _dbContext.WeatherForecast.Add(item);
-      _dbContext.SaveChanges();
-
-      return item.Id;
+      _dbContext = dbContext;
     }
 
     [HttpGet]
@@ -30,6 +26,15 @@ namespace Example.Controllers
       return _dbContext
         .WeatherForecast
         .SingleOrDefault(x => x.Id == id);
+    }
+
+    [HttpPost]
+    public int Create(WeatherForecast item)
+    {
+      _dbContext.WeatherForecast.Add(item);
+      _dbContext.SaveChanges();
+
+      return item.Id;
     }
   }
 }

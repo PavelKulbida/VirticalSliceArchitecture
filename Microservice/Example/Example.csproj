@@ -24,6 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Configuration\" />
     <Folder Include="Domain\Aggregate\" />
     <Folder Include="Domain\ValueType\" />
     <Folder Include="Dto\" />

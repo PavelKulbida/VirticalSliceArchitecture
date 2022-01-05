@@ -2,7 +2,7 @@ namespace Example
 {
   public class WeatherForecast
   {
-    public int Id { get; set; }
+    public int Id { get; private set; }
 
     public DateTime ForecastDate { get; set; }
 
