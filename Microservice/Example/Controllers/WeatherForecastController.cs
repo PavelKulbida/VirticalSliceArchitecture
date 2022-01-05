@@ -9,17 +9,27 @@ namespace Example.Controllers
   {
     private readonly ServiceDbContext _dbContext = new ServiceDbContext();
 
-    [HttpGet(Name = "GetWeatherForecast")]
-    public IEnumerable<WeatherForecast> Get()
+    [HttpPost]
+    public int Create(WeatherForecast item)
+    {
+      _dbContext.WeatherForecast.Add(item);
+      _dbContext.SaveChanges();
+
+      return item.Id;
+    }
+
+    [HttpGet]
+    public IEnumerable<WeatherForecast> ReadAll()
     {
       return _dbContext.WeatherForecast;
     }
 
-    [HttpPost(Name = "GetWeatherForecast")]
-    public void Post(WeatherForecast item)
+    [HttpGet("{id:int}")]
+    public WeatherForecast? Read(int id)
     {
-      _dbContext.WeatherForecast.Add(item);
-      _dbContext.SaveChanges();
+      return _dbContext
+        .WeatherForecast
+        .SingleOrDefault(x => x.Id == id);
     }
   }
 }
