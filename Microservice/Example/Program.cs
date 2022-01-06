@@ -1,4 +1,6 @@
-using Example.DataAccess;
+using Example.Features.WeatherForecastBrowse;
+using Example.Features.WeatherForecastCreate;
+using Example.Features.WeatherForecastRead;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,9 +10,12 @@ string connectionString = builder
   .GetConnectionString("DefaultConnection");
 
 
-// Add services to the container.
-builder.Services.AddDbContext<ServiceDbContext>(option =>
-  option.UseSqlite(connectionString));
+// Add features to the container.
+builder
+  .AddFeatureWeatherForecastBrowse(connectionString)
+  .AddFeatureWeatherForecastCreate(connectionString)
+  .AddFeatureWeatherForecastRead(connectionString);
+
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();

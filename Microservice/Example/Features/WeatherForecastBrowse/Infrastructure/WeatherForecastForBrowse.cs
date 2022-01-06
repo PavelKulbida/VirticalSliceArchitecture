@@ -1,6 +1,6 @@
-namespace Example
+namespace Example.Features.WeatherForecastBrowse
 {
-  public class WeatherForecast
+  public class WeatherForecastForBrowse
   {
     public int Id { get; private set; }
 
