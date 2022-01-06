@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace Example.Features.WeatherForecastRead.DataAccess
+namespace Example.Features.WeatherForecastRead.Infrastructure.DataAccess
 {
   public class WeatherForecastReadDbContext : DbContext
   {

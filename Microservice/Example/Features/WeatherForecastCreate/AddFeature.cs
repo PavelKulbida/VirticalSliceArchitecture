@@ -1,4 +1,4 @@
-﻿using Example.Features.WeatherForecastCreate.DataAccess;
+﻿using Example.Features.WeatherForecastCreate.Infrastructure.DataAccess;
 using Microsoft.EntityFrameworkCore;
 
 namespace Example.Features.WeatherForecastCreate

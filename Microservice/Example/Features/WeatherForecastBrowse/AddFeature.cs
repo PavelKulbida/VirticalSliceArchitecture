@@ -1,4 +1,4 @@
-﻿using Example.Features.WeatherForecastBrowse.DataAccess;
+﻿using Example.Features.WeatherForecastBrowse.Infrastructure.DataAccess;
 using Microsoft.EntityFrameworkCore;
 
 namespace Example.Features.WeatherForecastBrowse

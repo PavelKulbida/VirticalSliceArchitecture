@@ -1,4 +1,4 @@
-namespace Example.Features.WeatherForecastBrowse
+namespace Example.Features.WeatherForecastBrowse.Infrastructure
 {
   public class WeatherForecastForBrowse
   {

@@ -1,7 +1,7 @@
-using Example.Features.WeatherForecastBrowse.DataAccess;
+using Example.Features.WeatherForecastBrowse.Infrastructure.DataAccess;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Example.Features.WeatherForecastBrowse.Controllers
+namespace Example.Features.WeatherForecastBrowse.Infrastructure.Controllers
 {
   [ApiController]
   [Route("[controller]")]
