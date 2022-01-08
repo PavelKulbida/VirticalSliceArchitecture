@@ -1,3 +1,5 @@
+using Example.Features.Shared;
+
 namespace Example.Features.WeatherForecastBrowse.Infrastructure
 {
   public class WeatherForecastForBrowse
@@ -8,7 +10,7 @@ namespace Example.Features.WeatherForecastBrowse.Infrastructure
 
     public float TemperatureC { get; set; }
 
-    public double TemperatureF => 32 + (TemperatureC / 0.5556);
+    public double TemperatureF => TemperatureC.ToFahrenheit();
 
     public string? Summary { get; set; }
   }
