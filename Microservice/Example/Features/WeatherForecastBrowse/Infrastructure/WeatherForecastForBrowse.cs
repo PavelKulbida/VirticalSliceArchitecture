@@ -1,4 +1,4 @@
-using Example.Features.Shared;
+using Example.Shared;
 
 namespace Example.Features.WeatherForecastBrowse.Infrastructure
 {
