@@ -21,7 +21,7 @@ namespace Example.Features.WeatherForecastCreate.Infrastructure.Controllers
     [HttpPost]
     public int Create([FromBody] WeatherForecastForCreate item)
     {
-      _mediator.SendMessageAsync(WeatherForecastCreateCommand.Create(item));
+      _mediator.SendMessage(WeatherForecastCreateCommand.Create(item));
 
       return item.Id;
     }
