@@ -1,9 +1,9 @@
-﻿using Example.Features.WeatherForecastRead.Infrastructure.DataAccess;
+﻿using Example.Features.WeatherForecastRead.DataAccess;
 using Microsoft.EntityFrameworkCore;
 
 namespace Example.Features.WeatherForecastRead
 {
-  public static class AddFeature
+    public static class AddFeature
   {
     public static WebApplicationBuilder AddFeatureWeatherForecastRead(this WebApplicationBuilder builder, 
       string connectionString)
