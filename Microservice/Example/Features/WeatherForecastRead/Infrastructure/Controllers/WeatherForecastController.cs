@@ -1,25 +1,28 @@
-using Example.Features.WeatherForecastRead.Infrastructure.DataAccess;
+using Example.Features.WeatherForecastRead.Application;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using ViennaNET.Mediator;
+using ViennaNET.Utils;
 
 namespace Example.Features.WeatherForecastRead.Infrastructure.Controllers
 {
   [ApiController]
+  [AllowAnonymous]
   [Route("[controller]")]
   public class WeatherForecastController : ControllerBase
   {
-    private readonly WeatherForecastReadDbContext _dbContext;
+    private readonly IMediator _mediator;
 
-    public WeatherForecastController(WeatherForecastReadDbContext dbContext)
+    public WeatherForecastController(IMediator mediator)
     {
-      _dbContext = dbContext;
+      _mediator = mediator.ThrowIfNull(nameof(mediator));
     }
 
     [HttpGet("{id:int}")]
     public WeatherForecastForRead? Read(int id)
     {
-      return _dbContext
-        .WeatherForecast
-        .SingleOrDefault(x => x.Id == id);
+      return _mediator.SendMessage<GetWeatherForecastRequest, WeatherForecastForRead>(
+        GetWeatherForecastRequest.Create(id));
     }
   }
 }

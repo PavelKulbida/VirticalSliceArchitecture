@@ -1,14 +1,13 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Example.Features.WeatherForecastBrowse.Application;
+using ViennaNET.Orm;
 
 namespace Example.Features.WeatherForecastBrowse.Infrastructure.DataAccess
 {
-  public class WeatherForecastBrowseDbContext : DbContext
+  public class WeatherForecastBrowseDbContext : ApplicationContext
   {
-    public DbSet<WeatherForecastForBrowse> WeatherForecast { get; set; }
-
-    public WeatherForecastBrowseDbContext(DbContextOptions<WeatherForecastBrowseDbContext> options) 
-      : base(options)
+    public WeatherForecastBrowseDbContext() 
     {
+      AddEntity<WeatherForecastForBrowse>();
     }
   }
 }

@@ -19,8 +19,17 @@
 
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.1" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <PackageReference Include="SimpleInjector.Packaging" Version="5.0.0" />
+    <PackageReference Include="ViennaNET.Mediator.DefaultConfiguration" Version="5.0.0" />
+    <PackageReference Include="ViennaNET.Orm.DefaultConfiguration" Version="5.0.0" />
+    <PackageReference Include="ViennaNET.Orm.SQLite.DefaultConfiguration" Version="5.0.0" />
+    <PackageReference Include="ViennaNET.WebApi.Runners.BaseHttpSys" Version="5.0.0" />
+    <PackageReference Include="ViennaNET.WebApi.Runners.Extensions" Version="5.0.0" />
+    <PackageReference Include="ViennaNET.WebApi.WindowsHosting" Version="5.0.0" />
+    <PackageReference Include="ZorroCodeAnalyzers" Version="1.0.6">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
 </Project>
