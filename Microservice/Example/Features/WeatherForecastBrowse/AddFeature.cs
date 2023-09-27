@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Example.Features.WeatherForecastBrowse
 {
-    public static class AddFeature
+  public static class AddFeature
   {
     public static WebApplicationBuilder AddFeatureWeatherForecastBrowse(this WebApplicationBuilder builder, 
       string connectionString)
