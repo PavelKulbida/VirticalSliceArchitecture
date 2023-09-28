@@ -7,7 +7,7 @@ namespace Example.Features.WeatherForecastRead.Infrastructure.DataAccess
   {
     public WeatherForecastReadDbContext() 
     {
-      AddEntity<WeatherForecastForRead>();
+      AddEntity<WeatherForecast>();
     }
   }
 }

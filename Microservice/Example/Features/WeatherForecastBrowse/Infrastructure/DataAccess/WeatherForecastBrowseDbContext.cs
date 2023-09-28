@@ -9,7 +9,7 @@ namespace Example.Features.WeatherForecastBrowse.Infrastructure.DataAccess
   {
     public WeatherForecastBrowseDbContext() 
     {
-      AddEntity<WeatherForecastForBrowse>();
+      AddEntity<WeatherForecast>();
     }
   }
 }

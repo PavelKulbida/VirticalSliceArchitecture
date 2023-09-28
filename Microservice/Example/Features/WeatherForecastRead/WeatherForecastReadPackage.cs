@@ -14,7 +14,7 @@ namespace Example.Features.WeatherForecastRead
       container.Collection.Append<IBoundedContext, WeatherForecastReadDbContext>(Lifestyle.Singleton);
 
       container
-        .RegisterHandler<GetWeatherForecastRequest, WeatherForecastForRead,
+        .RegisterHandler<GetWeatherForecastRequest, WeatherForecast,
           GetWeatherForecastRequestHandler>();
     }
   }

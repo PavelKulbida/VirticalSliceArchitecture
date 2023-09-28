@@ -7,8 +7,8 @@ namespace Example.Features.WeatherForecastCreate.Application
     public bool IsCompleted { get; set; }
     public object Reason { get; set; }
 
-    public WeatherForecastForCreate Item { get; private init; }
+    public WeatherForecast Item { get; private init; }
 
-    public static WeatherForecastCreateCommand Create(WeatherForecastForCreate item) => new() { Item = item };
+    public static WeatherForecastCreateCommand Create(WeatherForecast item) => new() { Item = item };
   }
 }

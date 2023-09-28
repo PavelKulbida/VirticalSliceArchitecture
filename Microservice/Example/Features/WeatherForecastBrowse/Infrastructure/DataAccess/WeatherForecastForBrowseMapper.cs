@@ -5,10 +5,12 @@ using FluentNHibernate.Mapping;
 namespace Example.Features.WeatherForecastBrowse.Infrastructure.DataAccess
 {
   [ExcludeFromCodeCoverage]
-  internal class WeatherForecastForBrowseMapper : ClassMap<WeatherForecastForBrowse>
+  internal class WeatherForecastForBrowseMapper : ClassMap<WeatherForecast>
   {
     public WeatherForecastForBrowseMapper()
     {
+      HibernateMapping.Not.AutoImport();
+
       Table("WeatherForecast");
 
       Id(x => x.Id);

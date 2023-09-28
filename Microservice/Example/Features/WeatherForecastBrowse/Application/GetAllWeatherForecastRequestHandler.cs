@@ -4,7 +4,7 @@ using ViennaNET.Utils;
 
 namespace Example.Features.WeatherForecastBrowse.Application
 {
-  internal class GetWeatherForecastRequestHandler : IMessageHandler<GetAllWeatherForecastRequest, IEnumerable<WeatherForecastForBrowse>>
+  internal class GetWeatherForecastRequestHandler : IMessageHandler<GetAllWeatherForecastRequest, IEnumerable<WeatherForecast>>
   {
     private readonly IEntityFactoryService _repositoryFactory;
 
@@ -14,9 +14,9 @@ namespace Example.Features.WeatherForecastBrowse.Application
     }
 
 
-    public IEnumerable<WeatherForecastForBrowse> Handle(GetAllWeatherForecastRequest message)
+    public IEnumerable<WeatherForecast> Handle(GetAllWeatherForecastRequest message)
     {
-      return _repositoryFactory.Create<WeatherForecastForBrowse>().Query().ToArray();
+      return _repositoryFactory.Create<WeatherForecast>().Query().ToArray();
     }
   }
 }

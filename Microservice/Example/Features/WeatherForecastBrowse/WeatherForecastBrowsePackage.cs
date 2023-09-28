@@ -14,7 +14,7 @@ namespace Example.Features.WeatherForecastBrowse
       container.Collection.Append<IBoundedContext, WeatherForecastBrowseDbContext>(Lifestyle.Singleton);
 
       container
-        .RegisterHandler<GetAllWeatherForecastRequest, IEnumerable<WeatherForecastForBrowse>,
+        .RegisterHandler<GetAllWeatherForecastRequest, IEnumerable<WeatherForecast>,
           GetWeatherForecastRequestHandler>();
     }
   }

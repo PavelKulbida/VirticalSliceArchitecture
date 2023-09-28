@@ -21,9 +21,9 @@ namespace Example.Features.WeatherForecastBrowse.Infrastructure.Controllers
 
     [HttpGet]
     [AllowAnonymous]
-    public IEnumerable<WeatherForecastForBrowse> ReadAll()
+    public IEnumerable<WeatherForecast> ReadAll()
     {
-      return _mediator.SendMessage<GetAllWeatherForecastRequest, IEnumerable<WeatherForecastForBrowse>>(
+      return _mediator.SendMessage<GetAllWeatherForecastRequest, IEnumerable<WeatherForecast>>(
         GetAllWeatherForecastRequest.Create());
     }
   }

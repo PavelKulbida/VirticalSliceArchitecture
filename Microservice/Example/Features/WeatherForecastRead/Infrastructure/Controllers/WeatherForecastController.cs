@@ -21,9 +21,9 @@ namespace Example.Features.WeatherForecastRead.Infrastructure.Controllers
 
     [HttpGet("{id:int}")]
     [AllowAnonymous]
-    public WeatherForecastForRead? Read(int id)
+    public WeatherForecast? Read(int id)
     {
-      return _mediator.SendMessage<GetWeatherForecastRequest, WeatherForecastForRead>(
+      return _mediator.SendMessage<GetWeatherForecastRequest, WeatherForecast>(
         GetWeatherForecastRequest.Create(id));
     }
   }

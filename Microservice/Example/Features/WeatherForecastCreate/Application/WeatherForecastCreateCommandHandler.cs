@@ -16,7 +16,7 @@ namespace Example.Features.WeatherForecastCreate.Application
     public void Handle(WeatherForecastCreateCommand message)
     {
       using var uof = _repositoryFactory.Create();
-      var repository = _repositoryFactory.Create<WeatherForecastForCreate>();
+      var repository = _repositoryFactory.Create<WeatherForecast>();
       repository.Add(message.Item);
       uof.Commit();
 

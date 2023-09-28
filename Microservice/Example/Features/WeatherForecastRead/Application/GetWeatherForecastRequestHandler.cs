@@ -4,7 +4,7 @@ using ViennaNET.Utils;
 
 namespace Example.Features.WeatherForecastRead.Application
 {
-  internal class GetWeatherForecastRequestHandler : IMessageHandler<GetWeatherForecastRequest, WeatherForecastForRead>
+  internal class GetWeatherForecastRequestHandler : IMessageHandler<GetWeatherForecastRequest, WeatherForecast>
   {
     private readonly IEntityFactoryService _repositoryFactory;
 
@@ -13,9 +13,9 @@ namespace Example.Features.WeatherForecastRead.Application
       _repositoryFactory = repositoryFactory.ThrowIfNull(nameof(repositoryFactory));
     }
     
-    public WeatherForecastForRead Handle(GetWeatherForecastRequest message)
+    public WeatherForecast Handle(GetWeatherForecastRequest message)
     {
-      return _repositoryFactory.Create<WeatherForecastForRead>().Get(message.Id);
+      return _repositoryFactory.Create<WeatherForecast>().Get(message.Id);
     }
   }
 }

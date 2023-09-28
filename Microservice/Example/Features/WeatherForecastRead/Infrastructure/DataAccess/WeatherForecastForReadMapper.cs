@@ -3,10 +3,12 @@ using FluentNHibernate.Mapping;
 
 namespace Example.Features.WeatherForecastRead.Infrastructure.DataAccess
 {
-  internal class WeatherForecastForReadMapper : ClassMap<WeatherForecastForRead>
+  internal class WeatherForecastForReadMapper : ClassMap<WeatherForecast>
   {
     public WeatherForecastForReadMapper()
     {
+      HibernateMapping.Not.AutoImport();
+
       Table("WeatherForecast");
 
       Id(x => x.Id);

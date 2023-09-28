@@ -2,7 +2,7 @@ using ViennaNET.Orm.Seedwork;
 
 namespace Example.Features.WeatherForecastCreate.Application
 {
-  public class WeatherForecastForCreate : IEntityKey<int>
+  public class WeatherForecast : IEntityKey<int>
   {
         public virtual int Id { get; }
 

@@ -21,7 +21,7 @@ namespace Example.Features.WeatherForecastCreate.Infrastructure.Controllers
 
     [HttpPost]
     [AllowAnonymous]
-    public int Create([FromBody] WeatherForecastForCreate item)
+    public int Create([FromBody] WeatherForecast item)
     {
       _mediator.SendMessage(WeatherForecastCreateCommand.Create(item));
 
