@@ -1,8 +1,10 @@
-﻿using Example.Features.WeatherForecastCreate.Application;
+﻿using System.Diagnostics.CodeAnalysis;
+using Example.Features.WeatherForecastCreate.Application;
 using FluentNHibernate.Mapping;
 
 namespace Example.Features.WeatherForecastCreate.Infrastructure.DataAccess
 {
+  [ExcludeFromCodeCoverage]
   internal class WeatherForecastForCreateMapper : ClassMap<WeatherForecastForCreate>
   {
     public WeatherForecastForCreateMapper()

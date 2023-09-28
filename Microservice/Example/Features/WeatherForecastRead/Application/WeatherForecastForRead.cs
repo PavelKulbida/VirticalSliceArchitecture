@@ -3,7 +3,7 @@ using ViennaNET.Orm.Seedwork;
 
 namespace Example.Features.WeatherForecastRead.Application
 {
-    public class WeatherForecastForRead : IEntityKey<int>
+  public class WeatherForecastForRead : IEntityKey<int>
   {
         public virtual int Id { get; set; }
 

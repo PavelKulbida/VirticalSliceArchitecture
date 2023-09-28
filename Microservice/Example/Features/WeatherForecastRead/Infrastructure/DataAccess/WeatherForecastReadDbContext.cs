@@ -3,7 +3,7 @@ using ViennaNET.Orm;
 
 namespace Example.Features.WeatherForecastRead.Infrastructure.DataAccess
 {
-  public class WeatherForecastReadDbContext : ApplicationContext
+  internal class WeatherForecastReadDbContext : ApplicationContext
   {
     public WeatherForecastReadDbContext() 
     {

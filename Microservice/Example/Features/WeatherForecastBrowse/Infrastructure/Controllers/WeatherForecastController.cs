@@ -1,3 +1,4 @@
+using System.Diagnostics.CodeAnalysis;
 using Example.Features.WeatherForecastBrowse.Application;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -7,8 +8,8 @@ using ViennaNET.Utils;
 namespace Example.Features.WeatherForecastBrowse.Infrastructure.Controllers
 {
   [ApiController]
-  [AllowAnonymous]
   [Route("[controller]")]
+  [ExcludeFromCodeCoverage]
   public class WeatherForecastController : ControllerBase
   {
     private readonly IMediator _mediator;
@@ -19,6 +20,7 @@ namespace Example.Features.WeatherForecastBrowse.Infrastructure.Controllers
     }
 
     [HttpGet]
+    [AllowAnonymous]
     public IEnumerable<WeatherForecastForBrowse> ReadAll()
     {
       return _mediator.SendMessage<GetAllWeatherForecastRequest, IEnumerable<WeatherForecastForBrowse>>(

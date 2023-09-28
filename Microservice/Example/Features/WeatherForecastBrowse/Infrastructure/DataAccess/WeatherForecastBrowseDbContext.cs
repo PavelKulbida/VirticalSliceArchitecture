@@ -1,9 +1,11 @@
-﻿using Example.Features.WeatherForecastBrowse.Application;
+﻿using System.Diagnostics.CodeAnalysis;
+using Example.Features.WeatherForecastBrowse.Application;
 using ViennaNET.Orm;
 
 namespace Example.Features.WeatherForecastBrowse.Infrastructure.DataAccess
 {
-  public class WeatherForecastBrowseDbContext : ApplicationContext
+  [ExcludeFromCodeCoverage]
+  internal class WeatherForecastBrowseDbContext : ApplicationContext
   {
     public WeatherForecastBrowseDbContext() 
     {

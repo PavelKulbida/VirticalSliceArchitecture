@@ -2,7 +2,7 @@
 
 namespace Example.Features.WeatherForecastRead.Application
 {
-  internal class GetWeatherForecastRequest : IRequest
+  public class GetWeatherForecastRequest : IRequest
   {
     public int Id { get; private init; }
     

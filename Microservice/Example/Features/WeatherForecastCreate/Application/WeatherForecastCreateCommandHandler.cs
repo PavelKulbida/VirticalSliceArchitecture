@@ -4,7 +4,7 @@ using ViennaNET.Utils;
 
 namespace Example.Features.WeatherForecastCreate.Application
 {
-  public class WeatherForecastCreateCommandHandler : IMessageHandler<WeatherForecastCreateCommand>
+  internal class WeatherForecastCreateCommandHandler : IMessageHandler<WeatherForecastCreateCommand>
   {
     private readonly IEntityFactoryService _repositoryFactory;
 
